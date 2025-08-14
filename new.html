@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio — Single File</title>
+  <meta name="description" content="Responsive personal portfolio website in a single HTML file (HTML, CSS, JS)." />
+  <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header>
+    <div class="container nav" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Homepage">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>My Portfolio</span>
+      </a>
+
+      <nav class="menu" aria-label="Main menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="link-btn" aria-pressed="false" aria-label="Toggle theme">🌗 Theme</button>
+        <button id="cvBtn" class="btn btn--brand" aria-label="Download CV">Download CV</button>
+        <button id="hamburgerBtn" class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <nav id="drawer" class="drawer" aria-label="Mobile menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home" class="container">
+    <!-- ===================== HERO ===================== -->
+    <section aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-card">
+          <span class="eyebrow">Hello! I'm</span>
+          <h1 id="hero-title" class="title">
+            <span class="gradient">Shaheeka Farvin</span>
+            <span id="typing" aria-live="polite"></span>
+          </h1>
+          <p class="subtitle">I build fast, accessible, and delightful web experiences. This is a single-file, responsive portfolio built with semantic HTML, modern CSS, and vanilla JavaScript.</p>
+          <div class="cta">
+            <a class="btn btn--brand"  href="#projects">View Projects</a>
+            <a class="link-btn" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-ill" aria-hidden="true">
+          <img src="shaheeka.jpg">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <h2 id="about-title" class="section-title">About Me</h2>
+        <p class="section-kicker">Who I am and what I do</p>
+      </div>
+      <div class="about">
+        <div class="about-card">
+          <h3>Profile</h3>
+          <p class="muted">I'm a technology enthusiast passionate about front‑end developing, UI/UX, and building accessible apps. I enjoy turning ideas into production‑ready interfaces.</p>
+          <div class="about-grid" role="list">
+            <div class="about-item" role="listitem"><strong>Location:</strong><br/>Anuradhapura, Sri Lanka</div>
+            <div class="about-item" role="listitem"><strong>Role:</strong><br/>Web Developer</div>
+            <div class="about-item" role="listitem"><strong>Education:</strong><br/>B.Tech (ICT)</div>
+            <div class="about-item" role="listitem"><strong>Interests:</strong><br/>• Frontend • UI/UX • SQA</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Semantic HTML and accessible patterns .</li>
+            <li>Responsive layouts with CSS Grid & Flexbox.</li>
+            <li>Animations & transitions that respect user preferences.</li>
+            <li>Version control with Git, deploy on GitHub Pages/Netlify.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <p class="section-kicker">A few things I've built recently</p>
+      </div>
+      <div class="projects">
+        <!-- Card 1 -->
+        <article class="card" aria-labelledby="p1-title">
+          <div class="thumb">
+            <img src="card1.png">
+          </div>
+          <div class="card__body">
+            <h3 id="p1-title">Sri Lanka Tourism Website</h3>
+            <p class="muted">A website showcases popular tourist destinations in Sri Lanka, provides information about the country,
+                            and allows users to log in or sign up.</p>
+            
+            <div class="card__actions">
+              <a class="link-btn" href="https://shaheekafarvin.github.io/Srilanka-Tourism/" >Demo</a> 
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card" aria-labelledby="p2-title">
+          <div class="thumb">
+            <img src="card2.png">
+          </div>
+          <div class="card__body">
+            <h3 id="p2-title">Simple Calculator</h3>
+            <p class="muted">A Simple Calculator built using HTML and CSS. This project is designed to perform basic
+                        arithmetic operations with a clean and responsive user interface.</p>
+            
+            <div class="card__actions">
+              <a class="link-btn" href="https://shaheekafarvin.github.io/calculator-app/" >Demo</a>
+             
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card" aria-labelledby="p3-title">
+          
+          <div class="thumb">
+            <img src="card3.png">
+          
+          </div>
+          <div class="card__body">
+            <h3 id="p3-title">Interactive Quiz Application</h3>
+            <p class="muted">A quiz website where users can test their knowledge
+                         through a series of questions. It provides instant feedback, a final score, and options to view a report 
+                         or retake the quiz.</p>
+            <div class="card__actions">
+
+              <a class="link-btn" href="https://shaheekafarvin.github.io/quiz-app/" >demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="section-head">
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <p class="section-kicker">Tech I use regularly</p>
+      </div>
+      <div class="skills">
+        <div class="about-card">
+          <h3>Frontend</h3>
+          <div class="pillz">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Accessibility</span>
+          </div>
+          <p class="muted">Proficiency</p>
+          <div class="progress" aria-label="Frontend proficiency" aria-valuemin="0" aria-valuemax="100">
+            <div class="bar" data-percent="90"></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>UI/UX</h3>
+          <div class="pillz">
+            <span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Design Systems</span>
+          </div>
+          <p class="muted">Proficiency</p>
+          <div class="progress" aria-label="UI/UX proficiency" aria-valuemin="0" aria-valuemax="100">
+            <div class="bar" data-percent="80"></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>Tools</h3>
+          <div class="pillz">
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Vite</span><span class="tag">Netlify</span>
+          </div>
+          <p class="muted">Proficiency</p>
+          <div class="progress" aria-label="Tools proficiency" aria-valuemin="0" aria-valuemax="100">
+            <div class="bar" data-percent="85"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <p class="section-kicker">Let's build something great</p>
+      </div>
+      <div class="contact">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label>
+              <span class="muted">Your name</span>
+              <input name="name" type="text" required placeholder="Jane Doe" />
+            </label>
+            <label>
+              <span class="muted">Email</span>
+              <input name="email" type="email" required placeholder="you@example.com" />
+            </label>
+          </div>
+          <label>
+            <span class="muted">Subject</span>
+            <input name="subject" type="text" required placeholder="Project inquiry" />
+          </label>
+          <label>
+            <span class="muted">Message</span>
+            <textarea name="message" required placeholder="Tell me about your project..."></textarea>
+          </label>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn btn--brand" type="submit">Send Message</button>
+            
+          </div>
+        </form>
+        <div class="about-card">
+          <h3>Find me online</h3>
+          <p class="muted">Prefer email or socials? Reach out any time.</p>
+          <p>
+            <a class="link-btn" href="shaheekafarvin09@gmail.com">✉️ Email</a>
+            <a class="link-btn" href="#" >💼 LinkedIn</a>
+            <a class="link-btn" href="https://github.com/ShaheekaFarvin" >🐙 GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Shaheeka Farvin. All rights reserved.</span>
+      <a href="#home" class="muted">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    (function initTheme(){
+      const saved = localStorage.getItem('theme');
+      if(saved === 'light') document.body.classList.add('theme-light');
+    })();
+
+    const typingEl = document.getElementById('typing');
+    const roles = [" • Web Developer"];
+    let ri = 0, ci = 0, deleting = false;
+    function tick(){
+      const word = roles[ri];
+      typingEl.textContent = word.slice(0, ci);
+      if(!deleting && ci < word.length) ci++;
+      else if(deleting && ci > 0) ci--;
+      else if(ci === word.length) deleting = true;
+      else if(ci === 0){ deleting = false; ri = (ri + 1) % roles.length; }
+      setTimeout(tick, deleting ? 55 : 90);
+    }
+    tick();
+
+    const hamburger = document.getElementById('hamburgerBtn');
+    const drawer = document.getElementById('drawer');
+    hamburger.addEventListener('click', () => {
+      const open = drawer.style.display === 'block';
+      drawer.style.display = open ? 'none' : 'block';
+      hamburger.setAttribute('aria-expanded', String(!open));
+    });
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=>{ drawer.style.display='none'; hamburger.setAttribute('aria-expanded','false'); }));
+
+    document.getElementById('themeToggle').addEventListener('click', (e) => {
+      const light = !document.body.classList.toggle('theme-light');
+      e.currentTarget.setAttribute('aria-pressed', String(!light));
+      localStorage.setItem('theme', document.body.classList.contains('theme-light') ? 'light' : 'dark');
+    });
+
+    // CV download 
+
+    document.getElementById('cvBtn').addEventListener('click', () => {
+  const a = document.createElement('a');
+  a.href = 'Shaheeka_Farvin_CV.pdf'; 
+  a.download = 'Shaheeka_Farvin_CV.pdf'; 
+  document.body.appendChild(a); 
+  a.click();
+  document.body.removeChild(a);
+});
+
+
+    const bars = document.querySelectorAll('.bar');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const el = entry.target; el.style.width = el.dataset.percent + '%';
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    bars.forEach(b => io.observe(b));
+
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Sending...';
+      setTimeout(()=>{ btn.textContent = 'Sent ✓'; setTimeout(()=> btn.textContent = original, 1500); }, 800);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('*').forEach(el => el.style.scrollBehavior = 'auto');
+    }
+  </script>
+</body>
+</html>
