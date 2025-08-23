@@ -14,6 +14,7 @@
       --success: #10b981;
       --danger: #ef4444;
       --shadow: 0 10px 30px rgba(0,0,0,.25);
+
     }
 
     body.theme-light {
@@ -98,33 +99,51 @@
               transition: .2s ease; 
             }
 
-    .menu a:hover { border-color: var(--border); 
-                    background: color-mix(in oklab, var(--bg-soft) 90%, transparent); 
-                  }
+    .menu a:hover { 
+      border-color: var(--border); 
+      background: color-mix(in oklab, var(--bg-soft) 90%, transparent); 
+      color: var(--brand);
+      transition: color 0.3s, background 0.3s, border-color 0.3s;
+    }
 
     .nav-actions { display:flex; 
                    gap:10px; 
                  }
 
-    .btn { border:1px solid var(--border); 
-           background: var(--bg-soft); 
-           color:white; 
-           padding:8px 14px; 
-           border-radius: 12px; 
-           cursor:pointer; 
-           transition:.2s ease; 
-         }
+    .btn { 
+      border:1px solid var(--border); 
+      background: var(--bg-soft); 
+      color:white; 
+      padding:8px 24px; 
+      border-radius: 24px; 
+      cursor:pointer; 
+  transition: background 0.7s, color 0.7s, box-shadow 0.5s, transform 0.5s;
+      min-width: 160px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
    .link-btn{
       color:var(--clr);
    }
 
-    .btn:hover { transform: translateY(-1px); 
-                 box-shadow: var(--shadow); 
-               }
+    .btn:hover { 
+      box-shadow: var(--shadow); 
+      background: var(--brand); /* Change to violet on hover */
+      color: #fff; /* White text for contrast */
+    }
 
-    .btn--brand { border-color: color-mix(in oklab, var(--brand) 60%, var(--border)); 
-                  background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 60%, #000), color-mix(in oklab, var(--brand-2) 50%, #000)); 
-                }
+    .btn--brand { 
+      border-color: color-mix(in oklab, var(--brand) 60%, var(--border)); 
+      background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 60%, #000), color-mix(in oklab, var(--brand-2) 50%, #000)); 
+      color: #fff;
+    }
+    .btn--brand:hover {
+      background: var(--brand);
+      color: #fff;
+    }
 
     .hamburger { display:none; 
                  border:1px solid var(--border); background: var(--bg-soft); 
@@ -222,15 +241,20 @@
                  animation: float 6s ease-in-out infinite; 
                }
 
-    .hero-ill { aspect-ratio: 1 / 1; 
-                background: radial-gradient(70% 70% at 65% 35%, color-mix(in oklab, var(--brand) 25%, transparent), transparent 60%),
-                             radial-gradient(60% 60% at 30% 70%, color-mix(in oklab, var(--brand-2) 20%, transparent), transparent 60%),
-                             linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 90%, transparent), transparent);
-                border:1px solid var(--border); 
-                border-radius: 24px; 
-                position: relative; 
-                overflow:hidden; 
-               }
+    .hero-ill { 
+      aspect-ratio: 1 / 1; 
+      background: radial-gradient(70% 70% at 65% 35%, color-mix(in oklab, var(--brand) 25%, transparent), transparent 60%),
+                   radial-gradient(60% 60% at 30% 70%, color-mix(in oklab, var(--brand-2) 20%, transparent), transparent 60%),
+                   linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 90%, transparent), transparent);
+      border:1px solid var(--border); 
+      border-radius: 24px; 
+      position: relative; 
+      overflow:hidden; 
+      max-width: 420px;
+      max-height: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
     .chip { position:absolute; 
             inset:auto 16px 16px auto; 
@@ -268,12 +292,17 @@
              gap: 28px; 
             }
 
-    .about-card { background: var(--card); 
-                  border:1px solid var(--border); 
-                  border-radius: 18px; 
-                  padding: 20px; 
-                  box-shadow: var(--shadow); 
-               }
+    .about-card { 
+      background: var(--card); 
+      border:1px solid var(--border); 
+      border-radius: 18px; 
+      padding: 20px; 
+      box-shadow: var(--shadow); 
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
 
     .about-grid { display:grid; 
                   grid-template-columns: repeat(2, 1fr); 
@@ -338,12 +367,18 @@
       /* gap:10px;  */
    }
 
-    .link-btn { 
-      padding:8px 12px; 
-      border-radius:10px; 
-      border:1px solid var(--border); 
-      background: var(--bg-soft); 
-   }
+   .link-btn { 
+    padding:8px 12px; 
+  border-radius:24px; 
+    border:1px solid var(--border); 
+    background: var(--bg-soft); 
+    color: var(--brand);
+  transition: background 0.5s, color 0.5s;
+  }
+  .link-btn:hover {
+    background: var(--brand);
+    color: #fff;
+  }
 
     /* Skills */
 
@@ -455,10 +490,20 @@
       .projects { grid-template-columns: repeat(2, 1fr); }
       .skills { grid-template-columns: repeat(2, 1fr); }
       .contact { grid-template-columns: 1fr; }
+      .drawer a:hover {
+        color: var(--brand);
+        background: color-mix(in oklab, var(--bg-soft) 90%, transparent);
+        transition: color 0.3s, background 0.3s;
+      }
     }
     @media (max-width: 640px) {
       .projects { grid-template-columns: 1fr; }
       .skills { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
+      .drawer a:hover {
+        color: var(--brand);
+        background: color-mix(in oklab, var(--bg-soft) 90%, transparent);
+        transition: color 0.3s, background 0.3s;
+      }
     }
   
